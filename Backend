@@ -1,0 +1,12 @@
+/src
+  /controllers
+  /models
+  /routes
+  /middlewares
+  /services
+  /utils
+/tests
+config.js
+app.js
+package.json
+README.md
