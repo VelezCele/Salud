@@ -1,0 +1,13 @@
+/docker
+  Dockerfile
+  docker-compose.yml
+/kubernetes
+  /deployments
+  /services
+/terraform
+  /modules
+  /environments
+/ci-cd
+  Jenkinsfile
+  .github/workflows
+README.md
