@@ -1,4 +1,89 @@
-/schemas
-/migrations
-/seeds
-README.md
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 26-06-2024 a las 03:59:03
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.0.28
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `salud`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `id` int(11) NOT NULL,
+  `user` varchar(25) NOT NULL,
+  `nombre` varchar(25) NOT NULL,
+  `apellidos` varchar(25) NOT NULL,
+  `sexo` enum('M','F') NOT NULL,
+  `edad` int(11) NOT NULL,
+  `estatura` double NOT NULL,
+  `peso` double NOT NULL,
+  `imagenurl` varchar(400) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `user`, `nombre`, `apellidos`, `sexo`, `edad`, `estatura`, `peso`, `imagenurl`) VALUES
+(1, 'maria29', '', '', 'F', 0, 0, 0, ''),
+(2, 'yolo11', '', '', '', 0, 0, 0, ''),
+(3, 'ana11', '', '', '', 0, 0, 0, ''),
+(4, 'rocio29', '', '', '', 0, 0, 0, ''),
+(5, 'bale11', '', '', 'M', 0, 0, 0, ''),
+(6, 'pipi11', '', '', 'M', 0, 0, 0, ''),
+(7, 'poco11', '', '', 'M', 0, 0, 0, '');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_user_login_nick` (`user`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD CONSTRAINT `fk_user_login_nick` FOREIGN KEY (`user`) REFERENCES `login` (`nick`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
