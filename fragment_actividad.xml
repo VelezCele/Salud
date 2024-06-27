@@ -1,0 +1,58 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1E8E1"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="Fragments.ActividadFragment">
+
+
+        <TextView
+            android:id="@+id/lblRutinas"
+            android:layout_width="361dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="75dp"
+            android:text="Rutinas"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnRutina"
+            android:layout_width="155dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="120dp"
+            android:backgroundTint="#273D8B"
+            android:text="Nueva Rutina"
+            android:textSize="14sp"
+            app:icon="@drawable/seguimiento"
+            app:iconGravity="textTop"
+            app:iconSize="36dp"
+            app:cornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnExplorar"
+            android:layout_width="155dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="205dp"
+            android:layout_marginTop="120dp"
+            android:backgroundTint="#273D8B"
+            android:text="Explorar Rutinas"
+            android:textSize="14sp"
+            app:icon="@drawable/buscar"
+            app:iconGravity="textTop"
+            app:cornerRadius="16dp"
+            app:iconPadding="1dp"
+            app:iconSize="36dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+</FrameLayout>

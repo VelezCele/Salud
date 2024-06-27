@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainContenedor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1E8E1"
+    tools:context=".Registrar">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/fotoparasalud"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="316dp"
+        android:layout_height="430dp"
+        android:background="#F1E8E1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.458">
+
+        <TextView
+            android:id="@+id/lblRegistrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="10dp"
+            android:text="Registrate"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblCorreo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="90dp"
+            android:text="Correo Electrónico"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lblRegistrate" />
+
+        <EditText
+            android:id="@+id/txtCorreo"
+            android:layout_width="290dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="120dp"
+            android:ems="10"
+            android:hint="ejemplo@gmail.com"
+            android:inputType="textEmailAddress"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lblCorreo" />
+
+        <TextView
+            android:id="@+id/lblContrasena"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="180dp"
+            android:text="Contraseña"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtCorreo" />
+
+        <EditText
+            android:id="@+id/txtContrasena"
+            android:layout_width="290dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="210dp"
+            android:ems="10"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lblContrasena" />
+
+        <TextView
+            android:id="@+id/lblUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="270dp"
+            android:text="Nombre de Usuario"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtContrasena" />
+
+        <EditText
+            android:id="@+id/txtUsuario"
+            android:layout_width="290dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="300dp"
+            android:ems="10"
+            android:hint="usuario1"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lblUsuario" />
+
+        <Button
+            android:id="@+id/btnContinuar"
+            android:layout_width="290dp"
+            android:layout_height="51dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="370dp"
+            android:backgroundTint="#275ADC"
+            android:text="Continuar"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtUsuario" />
+
+    </FrameLayout>
+
+    <ImageButton
+        android:id="@+id/btnRegresar"
+        android:layout_width="56dp"
+        android:layout_height="36dp"
+        android:tint="#275ADC"
+        app:srcCompat="@android:drawable/ic_menu_revert"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="9dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
